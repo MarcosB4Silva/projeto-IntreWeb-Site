@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #301531;
+    --lilas: #d6c4d6;
+    --cinza: #bcbdbf;
+    --white: #fff;
+
+    --font-title: "Abhaya Libre", serif;
+    --font-text: "Montserrat", sans-serif;
+    ;
+    --big-font: 2.2rem;
+    --p-font: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+header,
+section,
+footer {
+    display: flex;
+    flex: 1 1 100vw;
+}
+
+body {
+    flex-wrap: wrap;
+}
+
+/* Estilizando menu */
+header {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+#logo {
+    width: 120px;
+    height: 50px;
+    margin: 2px;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+#menu a {
+    text-decoration: none;
+    font-family: var(--font-text);
+    color: var(--purple);
+    padding: 10px;
+    transition: ease-in-out 0.3s;
+    border-radius: 5px;
+    margin: 0 2px;
+
+    &:hover {
+        background-color: var(--purple);
+        color: var(--lilas);
+    }
+}
+
+/* Botões menu */
+#closeMenu,
+#openMenu {
+    border: none;
+    background: none;
+    font-size: var(--p-font);
+    font-weight: bolder;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    height: 100vh;
+}
+
+.home_text, .home_image{
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 50%;
+}
+.home_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 50px;
+    font-family: var(--font-text);
+    font-size: var(--p-font);
+    color: #444;
+}
+.home_text h1{
+    font-family: var(--font-title);
+    font-size: var(--big-font);
+    font-weight: 800;
+    color: var(--purple);
+
+    span{
+        color: #ce54d2;
+    }
+}
+.home_image{
+    background-image: url(../img/fundo.png);
+    background-position: center;
+    background-size: cover;
+}

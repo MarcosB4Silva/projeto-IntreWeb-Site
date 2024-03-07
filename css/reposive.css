@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+
+    #closeMenu,
+    #openMenu {
+        display: block;
+    }
+
+    #openMenu {
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        width: 100%;
+        text-align: right;
+    }
+
+    #menu {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff7d;
+        align-items: center;
+        justify-content: start;
+        margin: 0;
+        display: none;
+    }
+}
