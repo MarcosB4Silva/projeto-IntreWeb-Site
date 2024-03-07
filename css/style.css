@@ -14,9 +14,9 @@
 
     --font-title: "Abhaya Libre", serif;
     --font-text: "Montserrat", sans-serif;
-    ;
-    --big-font: 2.2rem;
-    --p-font: 1rem;
+
+    --big-font: 3rem;
+    --p-font: 1.2rem;
 }
 
 html {
@@ -89,6 +89,7 @@ header {
 }
 
 section {
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
@@ -104,7 +105,7 @@ section {
 .about_text {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     padding: 50px;
     font-family: var(--font-text);
     font-size: var(--p-font);
@@ -121,6 +122,11 @@ section {
     span {
         color: #ce54d2;
     }
+}
+.about_text h3{
+    color: var(--purple);
+    letter-spacing: 2px;
+    margin: 5px 0;
 }
 
 .home_image {
@@ -249,7 +255,6 @@ footer {
 .icone_redes {
     display: flex;
     text-align: center;
-    /* max-width: 50%; */
 }
 
 #instagram,
@@ -258,12 +263,12 @@ footer {
 #whatsapp {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 1.8rem;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin: 0 10px;
+    margin-left: 10px;
     transition: all 0.5s;
     cursor: pointer;
     color: var(--white);

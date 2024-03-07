@@ -1,31 +1,38 @@
 @media screen and (max-width: 1100px) {
-    .footer_content{
-        grid-template-columns: repeat(2, 1fr);
+
+    :root{
+        /* --big-font: 2.5rem; */
     }
-}
-@media screen and (max-width: 800px) {
-    section{
+
+    section {
         height: 100vh;
         flex-direction: column-reverse;
         overflow: hidden;
     }
-    
-    .home_text, .home_image{
+
+    .home_text,
+    .home_image {
         overflow: hidden;
         clip-path: none;
         width: 100%;
         height: 50%;
     }
-    .home_text{
+
+    .home_text {
         justify-content: start;
+    }
+
+    .footer_content {
+        flex-wrap: wrap-reverse;
     }
 }
 
-@media screen and (max-width: 768px) {
-    header{
+@media screen and (max-width: 800px) {
+    header {
         padding: 0;
     }
-    main{
+
+    main {
         padding-top: 0;
     }
 
@@ -57,14 +64,16 @@
     }
 
     /* Responsivo section Sobre */
-    #sobre{
+    #sobre {
         height: auto;
     }
-    .container_about{
+
+    .container_about {
         width: 100vw;
         height: auto;
         flex-direction: column;
     }
+
     .about_image,
     .about_text {
         width: 100%;
@@ -75,42 +84,46 @@
         justify-content: center;
     }
 
-    .about_text{
+    .about_text {
         margin-top: 20px;
     }
+
     /* Responsivo section serviços */
-    .container_box{
+    .container_box {
         flex-direction: column;
         width: 100vw;
         height: 80vh;
     }
-    .box{
+
+    .box {
         height: auto;
         width: auto;
         padding: 50px;
 
-        img{
+        img {
             height: 50px;
             width: 50px;
         }
     }
 
-    .container_projetos{
+    .container_projetos {
         width: 100vw;
         margin-top: 0;
     }
-    .box_projeto{
+
+    .box_projeto {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         /* flex-wrap: wrap; */
     }
-    .box_image{
+
+    .box_image {
         width: 100%;
         height: auto;
     }
 
-    .footer_content{
+    .footer_content {
         grid-template-columns: repeat(1, 1fr);
     }
 }
