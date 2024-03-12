@@ -1,38 +1,79 @@
 @media screen and (max-width: 1100px) {
-
-    :root{
-        /* --big-font: 2.5rem; */
+    .footer_content{
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    section {
+    section{
         height: 100vh;
         flex-direction: column-reverse;
         overflow: hidden;
     }
-
-    .home_text,
-    .home_image {
+    
+    .home_text, .home_image{
         overflow: hidden;
         clip-path: none;
         width: 100%;
         height: 50%;
     }
+    .home_text{
+        padding: 20px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .container_about{
+        width: 100vw;
+    }
+    /* Responsivo section serviços */
+    .servicos{
+        margin-top: 10px;
+    }
+    .container_box{
+        flex-direction: column;
+        width: 70vw;
+        height: 70vh;
+        margin: 25px 0;
+        padding: 5px;
+    }
+    .box{
+        height: auto;
+        width: 95%;
+        /*padding: 5%;*/
 
-    .home_text {
-        justify-content: start;
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+    
+    .button_whatsapp{
+        right: 5px;
     }
 
-    .footer_content {
-        flex-wrap: wrap-reverse;
+    .container_projetos{
+        width: 100vw;
+        margin-top: 0;
+    }
+    .box_projeto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+    .box_image{
+        width: 95%;
+        height: auto;
     }
 }
 
-@media screen and (max-width: 800px) {
-    header {
+@media screen and (max-width: 768px) {
+    :root {
+        --big-font: 2.2rem;
+        --p-font: 1rem;
+    }   
+    header{
         padding: 0;
     }
-
-    main {
+    main{
         padding-top: 0;
     }
 
@@ -61,69 +102,60 @@
         justify-content: start;
         margin: 0;
         display: none;
+        transition: ease-in-out 1s;
+    }
+    .home_text h1{
+            font-size: 2.4rem;
+    }
+    /* serviços */
+    .box h1 {
+        font-size: var(--big-font);
+        color: var(--purple);
+        font-family: var(--font-title);
+        font-weight: 900;
+    }
+    .box img{
+        height: 50px;
+        width: 50px;
+        margin-bottom: 0;
     }
 
     /* Responsivo section Sobre */
-    #sobre {
+    #sobre{
         height: auto;
     }
-
-    .container_about {
+    .container_about{
         width: 100vw;
         height: auto;
         flex-direction: column;
     }
-
     .about_image,
     .about_text {
         width: 100%;
         height: auto;
         display: flex;
-        align-items: center;
+        /*align-items: center;*/
         flex-direction: column;
         justify-content: center;
     }
 
-    .about_text {
+    .about_text{
         margin-top: 20px;
+        align-items: left;
+        padding: 0;
     }
+    
 
-    /* Responsivo section serviços */
-    .container_box {
-        flex-direction: column;
-        width: 100vw;
-        height: 80vh;
-    }
-
-    .box {
-        height: auto;
-        width: auto;
-        padding: 50px;
-
-        img {
-            height: 50px;
-            width: 50px;
-        }
-    }
-
-    .container_projetos {
-        width: 100vw;
-        margin-top: 0;
-    }
-
-    .box_projeto {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* flex-wrap: wrap; */
-    }
-
-    .box_image {
-        width: 100%;
-        height: auto;
-    }
-
-    .footer_content {
+    .footer_content{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 400px){
+    .servicos{
+        height: auto;
+        padding: 20px 0;
+    }
+    .footer_content{
+        height: auto;
     }
 }

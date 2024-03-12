@@ -16,7 +16,7 @@
     --font-text: "Montserrat", sans-serif;
 
     --big-font: 3rem;
-    --p-font: 1.2rem;
+    --p-font: 1.3rem;
 }
 
 html {
@@ -28,7 +28,7 @@ header,
 section,
 footer {
     display: flex;
-    flex: 1 1 100vw;
+    width: 100vw;
 }
 
 body {
@@ -89,7 +89,6 @@ header {
 }
 
 section {
-    width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
@@ -101,12 +100,14 @@ section {
     width: 50%;
 }
 
-.home_text,
-.about_text {
+.home_text{
+    padding-left: 50px;
+    padding-bottom: 200px;
+}
+.home_text, .about_text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 50px;
+    justify-content: end;
     font-family: var(--font-text);
     font-size: var(--p-font);
     color: #444;
@@ -123,10 +124,8 @@ section {
         color: #ce54d2;
     }
 }
-.about_text h3{
-    color: var(--purple);
-    letter-spacing: 2px;
-    margin: 5px 0;
+.home_text p {
+    width: 85%;
 }
 
 .home_image {
@@ -161,7 +160,7 @@ section {
 
 .about_text {
     padding: 0 20px;
-    text-align: left;
+    text-align: justify;
     align-items: start;
 }
 
@@ -171,11 +170,17 @@ section {
 }
 
 .servicos {
-    height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
+    height: 70vh;
+
+    h1{
+        font-size: var(--big-font);
+        color: var(--purple);
+    }
 }
 
 .container_box {
@@ -195,6 +200,7 @@ section {
     font-family: var(--font-text);
     border-radius: 5px;
     padding: 20px;
+    
     transition: ease-in-out 0.3s;
 
     &:hover {
@@ -212,10 +218,14 @@ section {
 }
 
 .box h1 {
+    font-size: xx-large;
     color: var(--purple);
+    font-family: var(--font-title);
+    font-weight: 900;
 }
 
 .box p {
+    font-size: var(--p-font);
     color: var(--purple);
     text-align: center;
 }
@@ -255,6 +265,7 @@ footer {
 .icone_redes {
     display: flex;
     text-align: center;
+    /* max-width: 50%; */
 }
 
 #instagram,
@@ -263,12 +274,12 @@ footer {
 #whatsapp {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 1.8rem;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin-left: 10px;
+    margin: 0 10px;
     transition: all 0.5s;
     cursor: pointer;
     color: var(--white);
