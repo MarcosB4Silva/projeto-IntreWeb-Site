@@ -1,11 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./views/css/reposive.css">
+    <link rel="stylesheet" href="./views/css/formulario.css">
+    <title>Formulario</title>
 </head>
-<body>
 
+<body>
+    <form action="formulario.php" id="formulario" method="post">
+        <h3>Qual tipo de serviço?</h3>
+        <label for="casa">
+            <input type="radio" id="casa" name="servico" value="construir" required> Construir
+        </label>
+        <label for="apartamento">
+            <input type="radio" id="apartamento" name="servico" value="reformar" required> Reformar
+        </label>
+        <label for="sala_comercial">
+            <input type="radio" id="sala_comercial" name="servico" value="consultoria" required> consultoria
+        </label>
+
+
+        <h3>Qual tipo de imóvel?</h3>
+        <label for="casa">
+            <input type="radio" id="casa" name="imovel" value="casa" required> Casa
+        </label>
+        <label for="apartamento">
+            <input type="radio" id="apartamento" name="imovel" value="apartamento" required> Apartamento
+        </label>
+        <label for="sala_comercial">
+            <input type="radio" id="sala_comercial" name="imovel" value="sala_comercial" required> Sala Comercial
+        </label>
+
+    <h3>Qual tamano m²?</h3>
+    <input type="number" name="metragem" placeholder="0.00" required>
+
+        <h3>Informe o endereço da obra</h3>
+        <div class="container_endereco">
+            <input type="text" placeholder="Rua" name="logradouro" required>
+            <input type="text" placeholder="Bairro" name="bairro" required>
+            <input type="text" placeholder="Cidade" name="cidade" required>
+            <input type="text" placeholder="Estado" name="estado" required>
+            <input type="text" placeholder="Complemento" name="complemento" required>
+        </div>
+
+        <h3>Quais são os ambientes? <br> <span>( caso seja sala comercial marque na linha *outros*)</span></h3>
+        <div class="container_ambientes">
+            <div class="box_checkbox">
+                <label for=""><input type="checkbox" value="sala_estar" name="ambiente"> SALA DE ESTAR </label>
+                <label for=""><input type="checkbox" value="sala_jantar" name="ambiente"> SALA DE JANTAR</label>
+                <label for=""><input type="checkbox" value="cozinha" name="ambiente"> COZINHAS</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> ÁREA DE SERVIÇO</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> SUÍTE</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> VARANDA</label>
+            </div>
+            <div class="box_checkbox">
+                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 1</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 2</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 3</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> BANHEIRO SOCIAL</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> ESCRITÓRIO</label>
+                <label for=""><input type="checkbox" value="" name="ambiente"> OUTRO: <input type="text"></label>
+            </div>
+        </div>
+
+
+        <h3>Com relação a REVESTIMENTOS, você deseja:</h3>
+        <label for="manter">
+            <input type="radio" id="manter" name="revestimento" value="manter" required> Manter
+        </label>
+        <label for="trocar">
+            <input type="radio" id="trocar" name="revestimento" value="trocar" required> Trocar
+        </label>
+        <label for="trocar_parcial">
+            <input type="radio" id="trocar_parcial" name="revestimento" value="trocar_parcial" required> Trocar
+            Parcialmente
+        </label>
+        <label for="ajuda">
+            <input type="radio" id="ajuda" name="revestimento" value="ajuda" required> Ajuda para decidir
+        </label>
+
+
+        <h3>Com relação a MARCENARIA, você deseja:</h3>
+        <label for="manter">
+            <input type="radio" id="manter" name="macenaria" value="manter" required> Manter
+        </label>
+        <label for="trocar">
+            <input type="radio" id="trocar" name="macenaria" value="trocar" required> Trocar
+        </label>
+        <label for="trocar_parcial">
+            <input type="radio" id="trocar_parcial" name="macenaria" value="trocar_parcial" required> Trocar
+            Parcialmente
+        </label>
+        <label for="ajuda">
+            <input type="radio" id="ajuda" name="macenaria" value="ajuda" required> Ajuda para decidir
+        </label>
+
+
+        <h3>Descreva o que mais gostaria de mudar nos ambientes ( gesso, iluminação,tomadas, pinturas e
+            etc..)</h3>
+        <input type="text" name="desc_ambiente">
+
+
+        <h3 for="">Possui a planta do imóvel? Mande fotos dos ambientes, isso ajuda a visualizar o que precisa nos
+            ambiente.</h3>
+        <input type=" file" name="foto_imovel" id="">
+
+        <h3 for="">Você pretende ficar por muito tempo nesse imóvel ? Ou é temporário?</h3>
+        <label for="muito">
+            <input type="radio" id="muito" name="tempo_imovel" value="muito" required> Manter
+        </label>
+        <label for="temporario">
+            <input type="radio" id="temporario" name="tempo_imovel" value="temporario" required> Trocar
+        </label>
+
+
+        <div class="inputBox">
+            <input type="text" name="nome" id="nome" class="inputUser" required>
+            <label for="nome" class="labelInput">Nome Completo</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+            <input type="text" name="email" id="email" class="inputUser" required>
+            <label for="email" class="labelInput">E-mail</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+            <label for="telefone" class="labelInput">Telefone</label>
+        </div> 
+
+        <button type="submit" name="submit">Solicitar</button>
+    </form>
 </body>
+
 </html>

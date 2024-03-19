@@ -1,11 +1,15 @@
+<?php
+include_once './php_action/conexao_bd.php';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reposive.css">
+    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./views/css/reposive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,16 +19,16 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="./img/logo_roxo_sem_fundo.png" alt="logo_roxo_sem_fundo" id="logo">
+            <img src="./views/img/logo_roxo_sem_fundo.png" alt="logo_roxo_sem_fundo" id="logo">
         </a>
 
         <button href="#" id="openMenu"><i class="fa-solid fa-bars"></i></button>
 
         <nav id="menu">
             <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
-            <a href="index.html" class="btn_menu">Inicio</a>
+            <a href="index.php" class="btn_menu">Inicio</a>
             <a href="projetos.html" class="btn_menu">Projetos</a>
-            <a href="#" class="btn_menu">Serviços</a>
+            <a href="formulario.html" class="btn_menu">Serviços</a>
             <a href="#" class="btn_menu">Contato</a>
         </nav>
     </header>
@@ -46,7 +50,7 @@
         <section id="sobre">
             <div class="container_about">
                 <div class="about_image">
-                    <img src="./img/adm.png" alt="">
+                    <img src="./views/img/adm.png" alt="">
                 </div>
                 <div class="about_text">
                     <h1>QUEM SOMOS</h1>
@@ -64,28 +68,43 @@
                         estamos
                         prontas para tornar seus projetos realidade.
                     </p>
+                    <div class="about_icones_redes">
+                        <h3> Redes Sociais</h3>
+                        <div class="icone_redes">
+                            <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
+                            <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
+                            <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- SERVIÇOS -->
         <section class="servicos">
             <h1>Conheça nosso Serviços</h1>
+
             <div class="container_box">
-                <div class="box">
-                    <img src="./img/icone-esboco.png" alt="">
-                    <h1>Construir</h1>
-                    <p>Se você precisa de projeto arquitetônico</p>
-                </div>
-                <div class="box">
-                    <img src="./img/icone-rolo-de-pintura.png" alt="">
-                    <h1>Reformar</h1>
-                    <p>Se você precisa de um projeto de interiores</p>
-                </div>
-                <div class="box">
-                    <img src="./img/icone-consultoria.png" alt="">
-                    <h1>Consultoria</h1>
-                    <p>Se você precisa de um serviço express </p>
-                </div>
+                <a href="formulario.html">
+                    <div class="box">
+                        <img src="./views/img/icone-esboco.png" alt="">
+                        <h1>Construir</h1>
+                        <p>Se você precisa de projeto arquitetônico</p>
+                    </div>
+                </a>
+                <a href="formulario.html">
+                    <div class="box">
+                        <img src="./views/img/icone-rolo-de-pintura.png" alt="">
+                        <h1>Reformar</h1>
+                        <p>Se você precisa de um projeto de interiores</p>
+                    </div>
+                </a>
+                <a href="formulario.html">
+                    <div class="box">
+                        <img src="./views/img/icone-consultoria.png" alt="">
+                        <h1>Consultoria</h1>
+                        <p>Se você precisa de um serviço express </p>
+                    </div>
+                </a>
             </div>
         </section>
         <!-- Whatsapp -->
@@ -126,7 +145,6 @@
                         <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
                         <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
                         <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
-
                     </div>
                 </div>
             </div>

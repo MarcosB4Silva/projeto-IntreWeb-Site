@@ -168,6 +168,13 @@ section {
     height: 100%;
     text-align: center;
 }
+.about_icones_redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-top: 10px;
+}
 
 .servicos {
     width: 100%;
@@ -188,6 +195,10 @@ section {
     width: 80%;
     align-items: center;
     justify-content: space-around;
+
+    a{
+        text-decoration: none;
+    }
 }
 
 .box {
@@ -220,8 +231,8 @@ section {
 .box h1 {
     font-size: xx-large;
     color: var(--purple);
-    font-family: var(--font-title);
-    font-weight: 900;
+    font-family: var(--font-text);
+    font-weight: 700;
 }
 
 .box p {
@@ -265,7 +276,6 @@ footer {
 .icone_redes {
     display: flex;
     text-align: center;
-    /* max-width: 50%; */
 }
 
 #instagram,
@@ -279,7 +289,8 @@ footer {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin: 0 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     transition: all 0.5s;
     cursor: pointer;
     color: var(--white);

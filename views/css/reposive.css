@@ -55,9 +55,7 @@
     }
     .box_projeto{
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        /* flex-wrap: wrap; */
     }
     .box_image{
         width: 95%;
@@ -144,8 +142,19 @@
         align-items: left;
         padding: 0;
     }
-    
+    /* projetos */
+    .box_image{
+        width: 100%;
+        height: auto;
+    }
+    .about_icones_redes{
+        padding-top: 10px;
+        margin: auto;
+    }
 
+    #formulario{
+        width: 100vw;
+    }
     .footer_content{
         grid-template-columns: repeat(1, 1fr);
     }
