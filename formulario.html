@@ -13,14 +13,14 @@
 <body>
     <form action="formulario.php" id="formulario" method="post">
         <h3>Qual tipo de serviço?</h3>
-        <label for="casa">
-            <input type="radio" id="casa" name="servico" value="construir" required> Construir
+        <label for="construir">
+            <input type="radio" id="construir" name="servico" value="construir" required> Construir
         </label>
-        <label for="apartamento">
-            <input type="radio" id="apartamento" name="servico" value="reformar" required> Reformar
+        <label for="reformar">
+            <input type="radio" id="reformar" name="servico" value="reformar" required> Reformar
         </label>
-        <label for="sala_comercial">
-            <input type="radio" id="sala_comercial" name="servico" value="consultoria" required> consultoria
+        <label for="consultoria">
+            <input type="radio" id="consultoria" name="servico" value="consultoria" required> consultoria
         </label>
 
 
@@ -36,7 +36,7 @@
         </label>
 
     <h3>Qual tamano m²?</h3>
-    <input type="number" name="metragem" placeholder="0.00" required>
+    <input type="number" name="metragem" placeholder="0.00" id="metragem" required>
 
         <h3>Informe o endereço da obra</h3>
         <div class="container_endereco">
@@ -50,20 +50,20 @@
         <h3>Quais são os ambientes? <br> <span>( caso seja sala comercial marque na linha *outros*)</span></h3>
         <div class="container_ambientes">
             <div class="box_checkbox">
-                <label for=""><input type="checkbox" value="sala_estar" name="ambiente"> SALA DE ESTAR </label>
-                <label for=""><input type="checkbox" value="sala_jantar" name="ambiente"> SALA DE JANTAR</label>
-                <label for=""><input type="checkbox" value="cozinha" name="ambiente"> COZINHAS</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> ÁREA DE SERVIÇO</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> SUÍTE</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> VARANDA</label>
+                <label for=""><input type="checkbox" value="sala_estar " name="ambiente[]"> SALA DE ESTAR </label>
+                <label for=""><input type="checkbox" value="sala_jantar " name="ambiente[]"> SALA DE JANTAR</label>
+                <label for=""><input type="checkbox" value="cozinha " name="ambiente[]"> COZINHAS</label>
+                <label for=""><input type="checkbox" value="area_servico " name="ambiente[]"> ÁREA DE SERVIÇO</label>
+                <label for=""><input type="checkbox" value="suite " name="ambiente[]"> SUÍTE</label>
+                <label for=""><input type="checkbox" value="varanda " name="ambiente[]"> VARANDA</label>
             </div>
             <div class="box_checkbox">
-                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 1</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 2</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> QUARTO 3</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> BANHEIRO SOCIAL</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> ESCRITÓRIO</label>
-                <label for=""><input type="checkbox" value="" name="ambiente"> OUTRO: <input type="text"></label>
+                <label for=""><input type="checkbox" value="quarto " name="ambiente[]"> QUARTO</label>
+                <label for=""><input type="checkbox" value="2_quartos " name="ambiente[]"> 2 QUARTOS</label>
+                <label for=""><input type="checkbox" value="3_quartos " name="ambiente[]"> 3 QUARTOS</label>
+                <label for=""><input type="checkbox" value="banheiro_social " name="ambiente[]"> BANHEIRO SOCIAL</label>
+                <label for=""><input type="checkbox" value="escritorio " name="ambiente[]"> ESCRITÓRIO</label>
+                <label for=""><input type="checkbox" value="" name="ambiente[]"> OUTRO: <input type="text"></label>
             </div>
         </div>
 
@@ -133,8 +133,45 @@
             <label for="telefone" class="labelInput">Telefone</label>
         </div> 
 
-        <button type="submit" name="submit">Solicitar</button>
+        <button type="submit" name="submit" id="btn_solicitar">Solicitar</button>
     </form>
+    <footer>
+        <div class="footer_content">
+            <div class="footer_info">
+                <h3>Desenvolvido</h3>
+                <div class="footer_info_container">
+                    <ul>
+                        <li><a href="#">Marcos Barros</a></li>
+                        <li><a href="#">Jhonatan Julio</a></li>
+                        <li><a href="#">Allan Sampaio</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Fernanda Souza</a></li>
+                        <li><a href="#">Jeferson Cardoso</a></li>
+                        <li><a href="#">Vinicius Lira</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_contacts">
+                <h3>Contatos</h3>
+                <p><i class="fa-solid fa-envelope"></i> E-mail: contato@intrearquitetura.com</p>
+                <p><i class="fa-solid fa-phone"></i> Tel: (11) 93067-2567</p>
+            </div>
+            <div class="footer_social_media">
+                <h3>Redes Sociais</h3>
+                <div class="icone_redes">
+                    <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
+                    <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
+                    <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyrigth">
+            &#169 2024 INTRÊ arquitetura
+        </div>
+    </footer>
+
 </body>
 
 </html>

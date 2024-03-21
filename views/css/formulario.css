@@ -52,3 +52,18 @@ input{
         margin: 5px;
     }
 }
+
+#metragem{
+    width: 10vw;
+    font-size: var(--p-font);
+    text-align: center;
+}
+
+#btn_solicitar{
+    margin: auto;
+    padding: 5px 10px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: var(--p-font);
+    border-radius: 5px;
+}
