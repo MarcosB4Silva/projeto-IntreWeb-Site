@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="./views/css/style.css">
     <link rel="stylesheet" href="./views/css/reposive.css">
     <link rel="stylesheet" href="./views/css/formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Formulario</title>
 </head>
 
 <body>
-    <form action="formulario.php" id="formulario" method="post">
+    <header>
+        <a href="index.php">
+            <img src="./views/img/logo_roxo_sem_fundo.png" alt="logo_roxo_sem_fundo" id="logo">
+        </a>
+
+        <button href="#" id="openMenu"><i class="fa-solid fa-bars"></i></button>
+
+        <nav id="menu">
+            <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+            <a href="index.php" class="btn_menu">Inicio</a>
+            <a href="projetos.html" class="btn_menu">Projetos</a>
+            <a href="#" class="btn_menu">Serviços</a>
+            <a href="#" class="btn_menu">Contato</a>
+        </nav>
+    </header>
+    <form action="./controllers/formulario.php" id="formulario" method="post">
         <h3>Qual tipo de serviço?</h3>
         <label for="construir">
             <input type="radio" id="construir" name="servico" value="construir" required> Construir
@@ -32,11 +50,11 @@
             <input type="radio" id="apartamento" name="imovel" value="apartamento" required> Apartamento
         </label>
         <label for="sala_comercial">
-            <input type="radio" id="sala_comercial" name="imovel" value="sala_comercial" required> Sala Comercial
+            <input type="radio" id="sala_comercial" name="imovel" value="Sala_comercial" required> Sala Comercial
         </label>
 
-    <h3>Qual tamano m²?</h3>
-    <input type="number" name="metragem" placeholder="0.00" id="metragem" required>
+        <h3>Qual tamanho m²?</h3>
+        <input type="number" name="metragem" placeholder="0m²" id="metragem" required>
 
         <h3>Informe o endereço da obra</h3>
         <div class="container_endereco">
@@ -50,19 +68,19 @@
         <h3>Quais são os ambientes? <br> <span>( caso seja sala comercial marque na linha *outros*)</span></h3>
         <div class="container_ambientes">
             <div class="box_checkbox">
-                <label for=""><input type="checkbox" value="sala_estar " name="ambiente[]"> SALA DE ESTAR </label>
-                <label for=""><input type="checkbox" value="sala_jantar " name="ambiente[]"> SALA DE JANTAR</label>
-                <label for=""><input type="checkbox" value="cozinha " name="ambiente[]"> COZINHAS</label>
-                <label for=""><input type="checkbox" value="area_servico " name="ambiente[]"> ÁREA DE SERVIÇO</label>
-                <label for=""><input type="checkbox" value="suite " name="ambiente[]"> SUÍTE</label>
-                <label for=""><input type="checkbox" value="varanda " name="ambiente[]"> VARANDA</label>
+                <label for=""><input type="checkbox" value="Sala de estar" name="ambiente[]"> SALA DE ESTAR </label>
+                <label for=""><input type="checkbox" value="Sala de jantar" name="ambiente[]"> SALA DE JANTAR</label>
+                <label for=""><input type="checkbox" value="Cozinha " name="ambiente[]"> COZINHAS</label>
+                <label for=""><input type="checkbox" value="Area de serviço" name="ambiente[]"> ÁREA DE SERVIÇO</label>
+                <label for=""><input type="checkbox" value="Suite" name="ambiente[]"> SUÍTE</label>
+                <label for=""><input type="checkbox" value="Varanda" name="ambiente[]"> VARANDA</label>
             </div>
             <div class="box_checkbox">
-                <label for=""><input type="checkbox" value="quarto " name="ambiente[]"> QUARTO</label>
-                <label for=""><input type="checkbox" value="2_quartos " name="ambiente[]"> 2 QUARTOS</label>
-                <label for=""><input type="checkbox" value="3_quartos " name="ambiente[]"> 3 QUARTOS</label>
-                <label for=""><input type="checkbox" value="banheiro_social " name="ambiente[]"> BANHEIRO SOCIAL</label>
-                <label for=""><input type="checkbox" value="escritorio " name="ambiente[]"> ESCRITÓRIO</label>
+                <label for=""><input type="checkbox" value="Quarto" name="ambiente[]"> QUARTO</label>
+                <label for=""><input type="checkbox" value="2 Quartos" name="ambiente[]"> 2 QUARTOS</label>
+                <label for=""><input type="checkbox" value="3 Quartos" name="ambiente[]"> 3 QUARTOS</label>
+                <label for=""><input type="checkbox" value="Banheiro social" name="ambiente[]"> BANHEIRO SOCIAL</label>
+                <label for=""><input type="checkbox" value="Escritorio" name="ambiente[]"> ESCRITÓRIO</label>
                 <label for=""><input type="checkbox" value="" name="ambiente[]"> OUTRO: <input type="text"></label>
             </div>
         </div>
@@ -105,9 +123,9 @@
         <input type="text" name="desc_ambiente">
 
 
-        <h3 for="">Possui a planta do imóvel? Mande fotos dos ambientes, isso ajuda a visualizar o que precisa nos
+        <!-- <h3 for="">Possui a planta do imóvel? Mande fotos dos ambientes, isso ajuda a visualizar o que precisa nos
             ambiente.</h3>
-        <input type=" file" name="foto_imovel" id="">
+        <input type="text" name="" id=""> -->
 
         <h3 for="">Você pretende ficar por muito tempo nesse imóvel ? Ou é temporário?</h3>
         <label for="muito">
@@ -119,22 +137,30 @@
 
 
         <div class="inputBox">
+            <label for="nome" class="labelInput">Nome Completo</label><br>
             <input type="text" name="nome" id="nome" class="inputUser" required>
-            <label for="nome" class="labelInput">Nome Completo</label>
+
         </div>
         <br><br>
         <div class="inputBox">
-            <input type="text" name="email" id="email" class="inputUser" required>
             <label for="email" class="labelInput">E-mail</label>
+            <input type="text" name="email" id="email" class="inputUser" required>
+
         </div>
         <br><br>
         <div class="inputBox">
-            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
             <label for="telefone" class="labelInput">Telefone</label>
-        </div> 
+            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+
+        </div>
 
         <button type="submit" name="submit" id="btn_solicitar">Solicitar</button>
     </form>
+
+    <div class="button_whatsapp">
+        <li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li>
+    </div>
+
     <footer>
         <div class="footer_content">
             <div class="footer_info">

@@ -1,5 +1,5 @@
 <?php
-include_once './php_action/conexao_bd.php';
+include_once './models/conexao_bd.php';
 
 ?>
 <!DOCTYPE html>
@@ -154,7 +154,8 @@ include_once './php_action/conexao_bd.php';
         </footer>
 
 
-        <script src="./js/scrypt.js"></script>
+        
 </body>
-
+    <script src="./views/js/scrypt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
