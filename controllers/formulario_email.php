@@ -1,5 +1,5 @@
 <?php
-$para = "marquinhobs231@gmail.com";
+$destinatario = "marquinhobs231@gmail.com";
 $subject = "INTRÊ aquitetura";
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
@@ -12,7 +12,7 @@ $mensagem .= "Endereço <br>$logradouro - $bairro, $cidade, $estado, $complement
 $mensagem .= "Ambientes: $total_ambientes";
 $mensagem .= "</head></html>";
 
-if (mail($para, $subject, $mensagem, $headers)) {
+if (mail($destinatario, $subject, $mensagem, $headers)) {
     $_SESSION['mensagem'] = "Formulario enviado para";
     header('Location: ../index.php');
 } else {

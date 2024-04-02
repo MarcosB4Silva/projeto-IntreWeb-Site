@@ -56,19 +56,13 @@ if (isset($_POST['submit'])) {
     $marcenaria = $_POST['macenaria'];
     $desc_ambiente = $_POST['desc_ambiente'];
 
-    $sql_verifica_projeto = mysqli_query($conexao, "SELECT * FROM tbprojetos WHERE formaContato = 'teste' and logradouro = '$logradouro' and bairro = '$bairro' and estado = '$estado' and cidade = '$cidade' and complemento = '$complemento' and tipoImovel = '$tipo_imovel' and tipoServico = '$tipo_servico' and metragem = '$metragem'  and revestimentos = '$revestimento' and marcenaria = '$marcenaria' and descricaoAmbiente = '$desc_ambiente' and codCli = '$codCli' and codAmb = '$codAmb')");
-
-    // ! ERRO: arrumar erro no if 
-    if (mysqli_num_rows($sql_verifica_projeto) > 0) {
-        header('Location: ../index.php');
-    } else {
-        $sql_cadastra_projeto = mysqli_query(
-            $conexao,
-            "INSERT INTO tbprojetos(formaContato, logradouro,bairro,estado,cidade,complemento,tipoImovel,tipoServico,metragem,revestimentos,marcenaria,descricaoAmbiente, codCli, codAmb) 
+    // $sql_verifica_projeto = mysqli_query($conexao, "SELECT * FROM tbprojetos WHERE formaContato = 'teste' and logradouro = '$logradouro' and bairro = '$bairro' and estado = '$estado' and cidade = '$cidade' and complemento = '$complemento' and tipoImovel = '$tipo_imovel' and tipoServico = '$tipo_servico' and metragem = '$metragem'  and revestimentos = '$revestimento' and marcenaria = '$marcenaria' and descricaoAmbiente = '$desc_ambiente' and codCli = '$codCli' and codAmb = '$codAmb')");
+    $sql_cadastra_projeto = mysqli_query(
+        $conexao,
+        "INSERT INTO tbprojetos(formaContato, logradouro,bairro,estado,cidade,complemento,tipoImovel,tipoServico,metragem,revestimentos,marcenaria,descricaoAmbiente, codCli, codAmb) 
         VALUES('teste', '$logradouro', '$bairro', '$estado', '$cidade', '$complemento', '$tipo_imovel', '$tipo_servico, '$metragem', '$revestimento', '$marcenaria', '$desc_ambiente', '$codCli', '$codAmb')"
-        );
-        header('Location: ../index.php');
-    }
+    );
+    header('Location: ../index.php');
     // ! PENDENTE: Fazer o envio de email para empresa quando o formulário for enviado
 
 } else {

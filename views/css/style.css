@@ -139,7 +139,7 @@ section {
 
 .container_about {
     width: 1024px;
-    height: 80vh;
+    /* height: 80vh; */
     margin: auto;
     display: flex;
     /* justify-content: center; */
@@ -200,6 +200,7 @@ section {
     width: 80%;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 15px;
 
     a{
         text-decoration: none;

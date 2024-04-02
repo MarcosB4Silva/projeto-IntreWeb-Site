@@ -27,7 +27,7 @@ include_once './models/conexao_bd.php';
         <nav id="menu">
             <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
             <a href="index.php" class="btn_menu">Inicio</a>
-            <a href="projetos.html" class="btn_menu">Projetos</a>
+            <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="formulario.html" class="btn_menu">Serviços</a>
             <a href="#" class="btn_menu">Contato</a>
         </nav>
@@ -137,9 +137,6 @@ include_once './models/conexao_bd.php';
                     <p><i class="fa-solid fa-phone"></i> Tel: (11) 93067-2567</p>
                 </div>
                 <div class="footer_social_media">
-                    <!-- <div class="logo_image">
-                    <img src="./img/logo_roxo_sem_fundo.png" alt="">
-                </div> -->
                     <h3>Redes Sociais</h3>
                     <div class="icone_redes">
                         <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
