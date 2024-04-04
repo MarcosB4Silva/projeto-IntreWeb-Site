@@ -24,7 +24,7 @@
         <nav id="menu">
             <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
             <a href="index.php" class="btn_menu">Inicio</a>
-            <a href="projetos.html" class="btn_menu">Projetos</a>
+            <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="#" class="btn_menu">Serviços</a>
             <a href="#" class="btn_menu">Contato</a>
         </nav>
@@ -36,7 +36,7 @@
             <?PHP
             include_once ("./models/conexao_bd.php");
 
-            $sql_pesquisa_image = "SELECT codImg, tituloGal, descricaoGal, fotosGaleria FROM tbgaleria";
+            $sql_pesquisa_image = "SELECT codImg, tituloGal, descricaoGal, fotosGaleria FROM tbGaleria";
             $result = mysqli_query($conexao, $sql_pesquisa_image);
 
             if ($result->num_rows > 0) {
@@ -46,20 +46,21 @@
                     // Verica se exite valor no projeto
                     if ($titulo_projeto == '') {
                         $titulo_projeto = $row['tituloGal'];
+                        $idName = "carrosel-" . $row["codImg"];
 
-                        echo '<div class="box_image" id="abrir_fotos">';
+                        echo "<div class=\"box_image\" onclick=\"abrir_fotos('$titulo_projeto')\">";
                         echo "<img src='data:image/jpeg;base64," . base64_encode($row['fotosGaleria']) . "' />";
                         echo "<p>$titulo_projeto</p>";
                         echo "</div>";
 
-
-                        echo '<div class="carousel-container" id"carrosel">';
+                        echo '<div id="' . $row["tituloGal"] . '" class="carrossel">';
+                        echo '<div class="carousel-container"';
                         echo '<div class="carross">';
-                        echo '<button class="prev" onclick="prevSlide(' . "'carousel-1'" . ')">&#10094;</button>';
-                        echo '<div class="carousel carousel-1">';
+                        echo '<button class="prev" onclick="prevSlide(\'' . $idName . '\')">&#10094;</button>';
+                        echo '<div class="carousel carousel-1" id="carrosel-' . $row["codImg"] . '">';
                         echo '<ul>';
 
-                        $sql_fotos_carrossel = mysqli_query($conexao, "SELECT tituloGal, fotosGaleria FROM tbgaleria");
+                        $sql_fotos_carrossel = mysqli_query($conexao, "SELECT tituloGal, fotosGaleria FROM tbGaleria");
                         while ($slide = $sql_fotos_carrossel->fetch_assoc()) {
                             if ($slide['tituloGal'] == $titulo_projeto) {
                                 echo "<li>";
@@ -70,24 +71,28 @@
 
                         echo '</ul>';
                         echo '</div>';
-                        echo '<button class="next" onclick="nextSlide(' . "'carousel-1'" . ')"> &#10095;</button>';
+                        echo '<button class="next" onclick="nextSlide(\'' . $idName . '\')"> &#10095;</button>';
                         echo '</div>';
                         echo '</div>';
+                        echo '<button id="fechar">X</button>';
                     } else {
                         if ($row['tituloGal'] != $titulo_projeto) {
                             $titulo_projeto = $row['tituloGal'];
-                            echo '<div class="box_image">';
+                            $idName = "carrosel-" . $row["codImg"];
+
+                            echo "<div class=\"box_image\" onclick=\"abrir_fotos('$titulo_projeto')\">";
                             echo "<img src='data:image/jpeg;base64," . base64_encode($row['fotosGaleria']) . "' />";
                             echo "<p>$titulo_projeto</p>";
                             echo "</div>";
 
-                            echo '<div class="carousel-container">';
+                            echo '<div id="' . $row["tituloGal"] . '" class="carrossel">';
+                            echo '<div class="carousel-container"';
                             echo '<div class="carross">';
-                            echo '<button class="prev" onclick="prevSlide(' . "'carousel-1'" . ')">&#10094;</button>';
-                            echo '<div class="carousel carousel-1">';
+                            echo '<button class="prev" onclick="prevSlide(\'' . $idName . '\')">&#10094;</button>';
+                            echo '<div class="carousel carousel-1" id="carrosel-' . $row['codImg'] . '">';
                             echo '<ul>';
 
-                            $sql_fotos_carrossel = mysqli_query($conexao, "SELECT tituloGal, fotosGaleria FROM tbgaleria");
+                            $sql_fotos_carrossel = mysqli_query($conexao, "SELECT tituloGal, fotosGaleria FROM tbGaleria");
                             while ($slide = $sql_fotos_carrossel->fetch_assoc()) {
                                 if ($slide['tituloGal'] == $titulo_projeto) {
                                     echo "<li>";
@@ -98,7 +103,7 @@
 
                             echo '</ul>';
                             echo '</div>';
-                            echo '<button class="next" onclick="nextSlide(' . "'carousel-1'" . ')"> &#10095;</button>';
+                            echo '<button class="next" onclick="nextSlide(\'' . $idName . '\')"> &#10095;</button>';
                             echo '</div>';
                             echo '</div>';
                         }
@@ -143,7 +148,7 @@
                 <div class="icone_redes">
                     <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
                     <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
-                    <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                    <li id=" tiktok"><i class="fa-brands fa-tiktok"></i></li>
                 </div>
             </div>
         </div>

@@ -24,34 +24,37 @@
         <nav id="menu">
             <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
             <a href="index.php" class="btn_menu">Inicio</a>
-            <a href="projetos.html" class="btn_menu">Projetos</a>
+            <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="#" class="btn_menu">Serviços</a>
             <a href="#" class="btn_menu">Contato</a>
         </nav>
     </header>
     <form action="./controllers/formulario.php" id="formulario" method="post">
         <h3>Qual tipo de serviço?</h3>
-        <label for="construir">
-            <input type="radio" id="construir" name="servico" value="construir" required> Construir
-        </label>
-        <label for="reformar">
-            <input type="radio" id="reformar" name="servico" value="reformar" required> Reformar
-        </label>
-        <label for="consultoria">
-            <input type="radio" id="consultoria" name="servico" value="consultoria" required> consultoria
-        </label>
-
+        <div class="input_radio">
+            <label for="construir">
+                <input type="radio" id="construir" name="servico" value="construir" class="servico" required> Construir
+            </label>
+            <label for="reformar">
+                <input type="radio" id="reformar" name="servico" value="reformar" class="servico" required> Reformar
+            </label>
+            <label for="consultoria">
+                <input type="radio" id="consultoria" name="servico" value="consultoria" class="servico" required> Consultoria
+            </label>
+        </div>
 
         <h3>Qual tipo de imóvel?</h3>
-        <label for="casa">
-            <input type="radio" id="casa" name="imovel" value="casa" required> Casa
-        </label>
-        <label for="apartamento">
-            <input type="radio" id="apartamento" name="imovel" value="apartamento" required> Apartamento
-        </label>
-        <label for="sala_comercial">
-            <input type="radio" id="sala_comercial" name="imovel" value="Sala_comercial" required> Sala Comercial
-        </label>
+        <div class="input_radio">
+            <label for="casa">
+                <input type="radio" id="casa" name="imovel" value="casa" required> Casa
+            </label>
+            <label for="apartamento">
+                <input type="radio" id="apartamento" name="imovel" value="apartamento" required> Apartamento
+            </label>
+            <label for="sala_comercial">
+                <input type="radio" id="sala_comercial" name="imovel" value="ala_comercial" required> Sala Comercial
+            </label>
+        </div>
 
         <h3>Qual tamanho m²?</h3>
         <input type="number" name="metragem" placeholder="0m²" id="metragem" required>
@@ -87,35 +90,39 @@
 
 
         <h3>Com relação a REVESTIMENTOS, você deseja:</h3>
-        <label for="manter">
-            <input type="radio" id="manter" name="revestimento" value="manter" required> Manter
-        </label>
-        <label for="trocar">
-            <input type="radio" id="trocar" name="revestimento" value="trocar" required> Trocar
-        </label>
-        <label for="trocar_parcial">
-            <input type="radio" id="trocar_parcial" name="revestimento" value="trocar_parcial" required> Trocar
-            Parcialmente
-        </label>
-        <label for="ajuda">
-            <input type="radio" id="ajuda" name="revestimento" value="ajuda" required> Ajuda para decidir
-        </label>
+        <div class="input_radio">
+            <label for="manter">
+                <input type="radio" id="manter" name="revestimento" value="manter" required> Manter
+            </label>
+            <label for="trocar">
+                <input type="radio" id="trocar" name="revestimento" value="trocar" required> Trocar
+            </label>
+            <label for="trocar_parcial">
+                <input type="radio" id="trocar_parcial" name="revestimento" value="trocar_parcial" required> Trocar
+                Parcialmente
+            </label>
+            <label for="ajuda">
+                <input type="radio" id="ajuda" name="revestimento" value="ajuda" required> Ajuda para decidir
+            </label>
+        </div>
 
 
         <h3>Com relação a MARCENARIA, você deseja:</h3>
-        <label for="manter">
-            <input type="radio" id="manter" name="macenaria" value="manter" required> Manter
-        </label>
-        <label for="trocar">
-            <input type="radio" id="trocar" name="macenaria" value="trocar" required> Trocar
-        </label>
-        <label for="trocar_parcial">
-            <input type="radio" id="trocar_parcial" name="macenaria" value="trocar_parcial" required> Trocar
-            Parcialmente
-        </label>
-        <label for="ajuda">
-            <input type="radio" id="ajuda" name="macenaria" value="ajuda" required> Ajuda para decidir
-        </label>
+        <div class="input_radio">
+            <label for="manter">
+                <input type="radio" id="manter" name="macenaria" value="manter" required> Manter
+            </label>
+            <label for="trocar">
+                <input type="radio" id="trocar" name="macenaria" value="trocar" required> Trocar
+            </label>
+            <label for="trocar_parcial">
+                <input type="radio" id="trocar_parcial" name="macenaria" value="trocar_parcial" required> Trocar
+                Parcialmente
+            </label>
+            <label for="ajuda">
+                <input type="radio" id="ajuda" name="macenaria" value="ajuda" required> Ajuda para decidir
+            </label>
+        </div>
 
 
         <h3>Descreva o que mais gostaria de mudar nos ambientes ( gesso, iluminação,tomadas, pinturas e
@@ -127,31 +134,26 @@
             ambiente.</h3>
         <input type="file" name="imagem" id="input_image">
 
-        <h3 for="">Você pretende ficar por muito tempo nesse imóvel ? Ou é temporário?</h3>
-        <label for="muito">
-            <input type="radio" id="muito" name="tempo_imovel" value="muito" required> Manter
-        </label>
-        <label for="temporario">
-            <input type="radio" id="temporario" name="tempo_imovel" value="temporario" required> Trocar
-        </label>
-
-
-        <div class="inputBox">
-            <label for="nome" class="labelInput">Nome Completo</label><br>
-            <input type="text" name="nome" id="nome" class="inputUser" required>
-
+        <h3 for="">Você pretende ficar por muito tempo nesse imóvel ou é temporário?</h3>
+        <div class="input_radio">
+            <label for="muito">
+                <input type="radio" id="muito" name="tempo_imovel" value="muito" required> Manter
+            </label>
+            <label for="temporario">
+                <input type="radio" id="temporario" name="tempo_imovel" value="temporario" required> Temporário
+            </label>
+    
         </div>
-        <br><br>
-        <div class="inputBox">
-            <label for="email" class="labelInput">E-mail</label>
-            <input type="text" name="email" id="email" class="inputUser" required>
 
-        </div>
-        <br><br>
         <div class="inputBox">
-            <label for="telefone" class="labelInput">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-
+            <label for="nome" class="labelInput">Nome: <input type="text" name="nome" id="nome" class="inputUser" required></label>
+            
+            <br>
+            <label for="email" class="labelInput">E-mail: <input type="text" name="email" id="email" class="inputUser" required></label>
+            
+            <br>
+            <label for="telefone" class="labelInput">Tel-Cel: <input type="tel" name="telefone" id="telefone" class="inputUser" required></label>
+            
         </div>
 
         <button type="submit" name="submit" id="btn_solicitar">Solicitar</button>
@@ -199,5 +201,7 @@
     </footer>
 
 </body>
+<script src="./views/js/scrypt.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>

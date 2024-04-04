@@ -31,15 +31,20 @@
     .container_box{
         flex-direction: column;
         width: 70vw;
-        height: 70vh;
+        height: 80vh;
         margin: 25px 0;
         padding: 5px;
     }
     .box{
         height: auto;
         width: 95%;
-        /*padding: 5%;*/
-
+        padding: 10px;
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
         img{
             height: 50px;
             width: 50px;
@@ -94,12 +99,14 @@
             font-size: 2.4rem;
     }
     /* serviços */
-    .box h1 {
+    .servicos h1{
+        text-align: center;
+    }
+    /* .box h1 {
         font-size: var(--big-font);
         color: var(--purple);
-        font-family: var(--font-title);
         font-weight: 900;
-    }
+    } */
     .box img{
         height: 50px;
         width: 50px;

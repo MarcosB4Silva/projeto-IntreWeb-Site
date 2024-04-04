@@ -1,9 +1,10 @@
 <?php
 
-$host = "localhost";
-$user_name = "root";
-$password = "";
-$db_name = "dbintre";
+$host = "10.23.49.20:3306";
+// $host = "localhost";
+$user_name = "senac";
+$password = "123";
+$db_name = "dbIntre";
 
 $conexao = mysqli_connect($host, $user_name, $password,$db_name);
 

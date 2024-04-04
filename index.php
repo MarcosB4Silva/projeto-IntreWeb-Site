@@ -72,7 +72,7 @@ include_once './models/conexao_bd.php';
                         <h3> Redes Sociais</h3>
                         <div class="icone_redes">
                             <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
-                            <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
+                            <li id="facebook"><i class="fa-brands fa-facebook-f"></i></li>
                             <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
                         </div>
                     </div>
@@ -151,8 +151,9 @@ include_once './models/conexao_bd.php';
         </footer>
 
 
-        
+
 </body>
-    <script src="./views/js/scrypt.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./views/js/scrypt.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>

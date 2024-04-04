@@ -1,10 +1,11 @@
-
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: var(--lilas); */
 }
-#formulario{
+
+#formulario {
     display: flex;
     flex-direction: column;
     font-family: var(--font-text);
@@ -13,59 +14,64 @@ body{
     margin: 100px 0;
     width: 50%;
     border-radius: 15px;
+    background-color: #fff;
 
-    h3{
+
+    h3 {
         margin: 10px 0;
         color: var(--purple);
     }
 
-    label{
+    label {
         color: #444;
         font-weight: 500;
     }
-    span{
+
+    span {
         color: #444;
         font-weight: lighter;
         font-style: italic;
         font-size: 0.9rem;
     }
 }
-.container_ambientes{
+
+.container_ambientes {
     display: flex;
 }
-.box_checkbox{
+
+.box_checkbox {
     padding-right: 20px;
     display: flex;
     flex-direction: column;
 }
 
-input{
-    border: none;
+input {
+    border: 1px solid gray;
     border-radius: 5px;
     padding: 5px;
     /* width: 50%; */
     background-color: #fff;
 }
 
-.container_endereco{
+.container_endereco {
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    input{
+    input {
         padding: 5px;
         margin: 5px;
     }
 }
 
-#metragem{
+#metragem {
     width: 10vw;
     font-size: var(--p-font);
     text-align: center;
 }
 
-#btn_solicitar{
+#btn_solicitar {
     margin: 15px auto;
     padding: 5px 15px;
     background-color: #30153111;
@@ -77,16 +83,53 @@ input{
     transition: 0.5s ease-in-out;
     cursor: pointer;
     letter-spacing: 1px;
-    
+
 }
-#btn_solicitar:hover{
+
+#btn_solicitar:hover {
     background-color: var(--purple);
     transform: translateY(-10px);
     color: var(--white);
 }
 
-#input_image{
+#input_image {
     border: none;
     color: var(--purple);
     font-style: italic;
+}
+
+.input_radio {
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+        margin-right: 15px;
+    }
+}
+.inputBox{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    input[type='text'], input[type='tel']{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #formulario{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #formulario{
+        width: 90%;
+        padding: 15px;
+    }
+
+    .container_ambientes {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

@@ -1,20 +1,33 @@
 function prevSlide(carouselClass) {
-    const carousel = document.querySelector('.' + carouselClass + ' ul');
-    const imagens = carousel.getElementsByTagName('li');
+    console.log(carouselClass);
+    const carousel = document.getElementById(carouselClass);
+    console.log(carousel);
+    const ul = carousel.querySelector('ul');
+    const imagens = ul.getElementsByTagName('li');
     const lastSlide = imagens[imagens.length - 1];
-    carousel.insertBefore(lastSlide, imagens[0]);
+    ul.insertBefore(lastSlide, imagens[0]);
 }
 
 function nextSlide(carouselClass) {
-    const carousel = document.querySelector('.' + carouselClass + ' ul');
-    const primeiroSlides = carousel.getElementsByTagName('li')[0];
-    carousel.appendChild(primeiroSlides);
+    const carousel = document.getElementById(carouselClass);
+    const ul = carousel.querySelector('ul');
+    const primeiroSlides = ul.getElementsByTagName('li')[0];
+    ul.appendChild(primeiroSlides);
 }
 
-const abrir_fotos = document.getElementById('abrir_fotos');
+const fechar = document.getElementById('fechar');
 
-abrir_fotos.addEventListener('click', () => {
+function abrir_fotos(titulo) {
+    console.log(titulo);
+    const carrosel = document.getElementById(`${titulo}`);
+
     carrosel.style.display = 'flex';
-    openMenu.style.display = 'none';
-})
+    fechar.style.display = 'flex';
+    fechar.addEventListener('click', () => {
+        carrosel.style.display = 'none';
+        fechar.style.display = 'none';
+    })
+}
+
+
 

@@ -1,4 +1,4 @@
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,93 +6,142 @@ main{
     position: relative;
     width: 100vw;
 }
-.background_content{
+
+.background_content {
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-color: var(--lilas);
-    border-radius: 500px 0 0 0;
     z-index: -1;
     right: 0;
-    box-shadow:inset 2px 2px 30px #512d5a;
+    box-shadow: inset 2px 2px 30px #512d5a;
 }
-h1{
+
+h1 {
     margin-top: 100px;
     margin-left: 5%;
     font-size: var(--big-font);
     color: var(--purple);
+    padding-bottom: 15px;
 }
-.container_projetos{
+
+.container_projetos {
     margin-top: 10px;
     width: 90vw;
     column-count: 2;
     column-gap: 2em;
     min-height: 100vh;
+    padding-top: 10px;
+    /* text-align: center; */
+    font-weight: bolder;
+    font-size: xx-large;
 }
 
-.box_image{
-    height: 400px;
+.box_image {
+    height: 600px;
     margin-bottom: 50px;
     border-radius: 5px;
     text-align: center;
-    position: relative;
+    /* position: relative; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
 /* p{
 
 } */
-img{
+img {
     height: 100%;
+    max-width: 100%;
     margin: auto;
-        border-radius: 5px;
+    border-radius: 5px;
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 1;
+    background-color: #00000083;
+    backdrop-filter: blur(15px);
 }
 
 .carousel-container {
     width: 80%;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    /* position: absolute; */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .carousel-container h1 {
     margin: 20px;
     font-size: 1.7vw;
 }
+
 .carousel {
     overflow: hidden;
-    position: relative; /* Para alinhar os botões de navegação */
+    position: relative;
+    /* Para alinhar os botões de navegação */
 }
+
 .carousel ul {
     list-style: none;
     display: flex;
-    transition: transform 1s ease;
+    /* text-align: center;
+    justify-content: center; */
+    /* transition: transform 1s ease; */
 }
+
 .carousel li {
-    flex: 0 0 100%; /* Isso aqui é para ocupar a largura total do container*/
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Isso aqui é para ocupar a largura total do container*/
 }
+
 .carousel img {
     border-radius: 13px;
-    border: 2px solid black;
-    width: 95%; /* pras imagem ficar dentro da div certinho e não ficar cortando*/
-    height: 90%; /* Definindo uma altura fixa para as imagens */
+    /* border: 2px solid black; */
+    width: 90%;
+    /* pras imagem ficar dentro da div certinho e não ficar cortando*/
+    height: 600px;
+    /* Definindo uma altura fixa para as imagens */
 }
 
 .carousel-1 {
-    max-width: 60vw; /* Largura máxima do primeiro carrossel */
+    max-width: 60vw;
+    /* Largura máxima do primeiro carrossel */
 }
 
 
-.carross{
+.carross {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.prev, .next {
+.prev,
+.next {
     font-size: 50px;
     cursor: pointer;
-    margin-bottom: 25px;
+    color: var(--lilas);
+    transition: 0.5s ease-in-out;
+    padding: 10px 5px;
+    background-color: #512d5a;
+
+    &:hover{
+        transform: scale(1.5);
+        color: var(--lilas);
+    }
+    /* margin-bottom: 25px; */
 }
 
 .prev {
@@ -103,21 +152,47 @@ img{
     right: 0;
 }
 
-.prev:hover, .next:hover{
-    color: gray ;
-    transform: scale(1.2);
-}
 
-
-.carousel-container .prev, .carousel-container .next {
-    background-color: transparent; /* Remove o fundo branco */
+.carousel-container .prev,
+.carousel-container .next {
+    background-color: transparent;
+    /* Remove o fundo branco */
     border: none;
-    
+
 }
 
-@media screen and (max-width: 1000px){
-    .container_projetos{
+#fechar{
+    z-index: 2;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    color: var(--lilas);
+    font-size: xx-large;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container_projetos {
         column-count: 1;
         width: 95vw;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .container_projetos {
+        column-count: 1;
+        width: 100vw;
+    }
+    .box_image {
+        height: 250px;
     }
 }
