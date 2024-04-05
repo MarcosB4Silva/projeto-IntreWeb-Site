@@ -73,6 +73,7 @@
                         echo '</div>';
                         echo '<button class="next" onclick="nextSlide(\'' . $idName . '\')"> &#10095;</button>';
                         echo '</div>';
+                        // echo "<h1>$titulo_projeto</h1>";
                         echo '</div>';
                         echo '<button id="fechar">X</button>';
                     } else {
@@ -147,8 +148,8 @@
                 <h3>Redes Sociais</h3>
                 <div class="icone_redes">
                     <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
-                    <li id="facebook"><i class="fa-brands fa-facebook-f" "></i></li>
-                    <li id=" tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                    <li id="facebook"><i class="fa-brands fa-facebook-f"></i></li>
+                    <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
                 </div>
             </div>
         </div>

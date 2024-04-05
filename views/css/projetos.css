@@ -26,20 +26,24 @@ h1 {
 }
 
 .container_projetos {
-    margin-top: 10px;
-    width: 90vw;
-    column-count: 2;
-    column-gap: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 4rem;
+    margin: 50px 0;
+    width: 100vw;
+    /* column-count: 2; */
+    /* column-gap: 2em; */
     min-height: 100vh;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     /* text-align: center; */
     font-weight: bolder;
     font-size: xx-large;
 }
 
 .box_image {
-    height: 600px;
-    margin-bottom: 50px;
+    height: 500px;
     border-radius: 5px;
     text-align: center;
     /* position: relative; */
@@ -109,9 +113,9 @@ img {
 .carousel img {
     border-radius: 13px;
     /* border: 2px solid black; */
-    width: 90%;
+    /* width: 90%; */
     /* pras imagem ficar dentro da div certinho e não ficar cortando*/
-    height: 600px;
+    /* height: 600px; */
     /* Definindo uma altura fixa para as imagens */
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-$host = "10.23.49.20:3306";
+$host = "10.23.49.22:3306";
 // $host = "localhost";
 $user_name = "senac";
 $password = "123";
