@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./views/css/reposive.css">
+    <link rel="stylesheet" href="./views/css/servico.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Serviço</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.php">
+            <img src="./views/img/logo_roxo_sem_fundo.png" alt="logo_roxo_sem_fundo" id="logo">
+        </a>
+
+        <button href="#" id="openMenu"><i class="fa-solid fa-bars"></i></button>
+
+        <nav id="menu">
+            <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+            <a href="index.php" class="btn_menu">Início</a>
+            <a href="projetos.php" class="btn_menu">Projetos</a>
+            <a href="servico.html" class="btn_menu">Serviços</a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>SERVIÇOS</h1>
+        <br><br>
+        <p>A Intrê Arquitetura, acredita que cada história é única e merece ser contada de forma especial. Por isso,
+            nossos serviços de design de interiores e arquitetura são totalmente personalizados para atender aos seus
+            desejos e necessidades. Seja em um novo lar ou na renovação do ambiente que você já ama, estamos aqui para
+            criar algo que vai além das suas expectativas.</p>
+        <div class="container_servico">
+            <div class="box_servico" id="box_servico_top">
+                <img src="./views/img/image_contruir.jpg" alt="">
+                <div class="servico_text">
+                    <h1>ARQUITETURA</h1>
+                    <p>Trabalhamos com elaboração de projetos de acordo com a necessidade de cada cliente, com
+                        exclusividade. Cuidamos de tudo o que é necessário para a realização do seu sonho.</p>
+                    <a href="formulario.html" class="button">Solicitar</a>
+                </div>
+            </div>
+            <div class="box_servico_reverse">
+                <div class="servico_text">
+                    <h1>INTERIORES</h1>
+                    <p>Uma pequena mudança faz toda diferença em um ambiente. Vamos da maquete 3D até os detalhamentos trazendo soluções para seu espaço, através do 3D você visualiza seu sonho antes de se tornar realidade.</p>
+                    <a href="formulario.html" class="button">Solicitar</a>
+                </div>
+                <img src="./views/img/image_interiores.png" alt="">
+            </div>
+            <div class="box_servico" id="box_servico_bottom">
+                <img src="./views/img/image_consultoria.png" alt="">
+                <div class="servico_text">
+                    <h1>CONSULTORIA</h1>
+                    <p>Com valor acessível e prazo de atendimento mais rápido.  O cliente conta com dicas, soluções e explicações para o seu ambiente. A Intrê oferece a maneira ideal de trazer o melhor do espaço sem necessidade de grandes alterações.</p>
+                    <a href="formulario.html" class="button">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="button_whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
+    </div>
+
+    <footer>
+        <div class="footer_content">
+            <div class="footer_info">
+                <h3>Desenvolvido</h3>
+                <div class="footer_info_container">
+                    <ul>
+                        <li><a href="#">Marcos Barros</a></li>
+                        <li><a href="#">Jhonatan Julio</a></li>
+                        <li><a href="#">Allan Sampaio</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Fernanda Souza</a></li>
+                        <li><a href="#">Jeferson Cardoso</a></li>
+                        <li><a href="#">Vinicius Lira</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_contacts">
+                <h3>Contatos</h3>
+                <p><i class="fa-solid fa-envelope"></i> E-mail: contato@intrearquitetura.com</p>
+                <p><i class="fa-solid fa-phone"></i> Tel: (11) 93067-2567</p>
+            </div>
+            <div class="footer_social_media">
+                <h3>Redes Sociais</h3>
+                <div class="icone_redes">
+                    <a href="https://www.instagram.com/intrearquitetura/">
+                        <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a href="https://www.facebook.com/intrearquitetura">
+                        <li id="facebook"><i class="fa-brands fa-facebook-f"></i></li>
+                    </a>
+                    <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1">
+                        <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyrigth">
+            &#169 2024 INTRÊ arquitetura
+        </div>
+    </footer>
+    <script src="./views/js/scrypt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

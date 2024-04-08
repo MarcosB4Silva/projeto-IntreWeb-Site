@@ -23,10 +23,10 @@
 
         <nav id="menu">
             <button id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
-            <a href="index.php" class="btn_menu">Inicio</a>
+            <a href="index.php" class="btn_menu">Início</a>
             <a href="projetos.php" class="btn_menu">Projetos</a>
-            <a href="#" class="btn_menu">Serviços</a>
-            <a href="#" class="btn_menu">Contato</a>
+            <a href="servico.html" class="btn_menu">Serviços</a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu">Contato</a>
         </nav>
     </header>
     <h1>Projetos</h1>
@@ -73,7 +73,6 @@
                         echo '</div>';
                         echo '<button class="next" onclick="nextSlide(\'' . $idName . '\')"> &#10095;</button>';
                         echo '</div>';
-                        // echo "<h1>$titulo_projeto</h1>";
                         echo '</div>';
                         echo '<button id="fechar">X</button>';
                     } else {
@@ -117,7 +116,7 @@
         </div>
     </main>
     <div class="button_whatsapp">
-        <li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li>
+    <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
     </div>
 
     <!-- FOOTER -->
@@ -141,15 +140,15 @@
 
             <div class="footer_contacts">
                 <h3>Contatos</h3>
-                <p><i class="fa-solid fa-envelope"></i> E-mail: contato@intrearquitetura.com</p>
-                <p><i class="fa-solid fa-phone"></i> Tel: (11) 93067-2567</p>
+                <span><i class="fa-solid fa-envelope"></i> E-mail: contato@intrearquitetura.com</span>
+                <span><i class="fa-solid fa-phone"></i> Tel: (11) 93067-2567</span>
             </div>
             <div class="footer_social_media">
                 <h3>Redes Sociais</h3>
                 <div class="icone_redes">
-                    <li id="instagram"><i class="fa-brands fa-instagram"></i></li>
-                    <li id="facebook"><i class="fa-brands fa-facebook-f"></i></li>
-                    <li id="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+                    <a href="https://www.instagram.com/intrearquitetura/"><li id="instagram"><i class="fa-brands fa-instagram"></i></li></a>
+                    <a href="https://www.facebook.com/intrearquitetura"><li id="facebook"><i class="fa-brands fa-facebook-f"></i></li></a>
+                    <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1"><li id="tiktok"><i class="fa-brands fa-tiktok"></i></li></a>
                 </div>
             </div>
         </div>

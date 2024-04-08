@@ -20,7 +20,7 @@ main {
 h1 {
     margin-top: 100px;
     margin-left: 5%;
-    font-size: var(--big-font);
+    font-size: var(--Title-font-size);
     color: var(--purple);
     padding-bottom: 15px;
 }
@@ -28,16 +28,11 @@ h1 {
 .container_projetos {
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: center;
     gap: 4rem;
     margin: 50px 0;
     width: 100vw;
-    /* column-count: 2; */
-    /* column-gap: 2em; */
     min-height: 100vh;
-    /* padding-top: 10px; */
-    /* text-align: center; */
     font-weight: bolder;
     font-size: xx-large;
 }
@@ -46,21 +41,31 @@ h1 {
     height: 500px;
     border-radius: 5px;
     text-align: center;
-    /* position: relative; */
+    position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-/* p{
-
-} */
+p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--lilas);
+    font-family: var(--Title-font-size);
+    background-color: #00000050;
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+}
 img {
     height: 100%;
     max-width: 100%;
     margin: auto;
     border-radius: 5px;
+    /* box-shadow: 2px 2px 10px #c0c0c0; */
 }
 
 .carrossel {
