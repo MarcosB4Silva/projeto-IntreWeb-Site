@@ -28,6 +28,7 @@
             <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="servico.html" class="btn_menu">Serviços</a>
             <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu" target="_blank">Contato</a>
+
         </nav>
     </header>
     <h1>Projetos</h1>
