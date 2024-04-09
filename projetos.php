@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>INTRÊ Aquitetura</title>
+    <link rel="shortcut icon" href="./icoIntre.ico" type="image/x-icon">    
+    <title>INTRÊ Arquitetura: Projetos</title>
 </head>
 
 <body>
-    <header>
+<header>
         <a href="index.php">
             <img src="./views/img/logo_roxo_sem_fundo.png" alt="logo_roxo_sem_fundo" id="logo">
         </a>
@@ -26,7 +27,7 @@
             <a href="index.php" class="btn_menu">Início</a>
             <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="servico.html" class="btn_menu">Serviços</a>
-            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu">Contato</a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu" target="_blank">Contato</a>
         </nav>
     </header>
     <h1>Projetos</h1>
@@ -116,7 +117,7 @@
         </div>
     </main>
     <div class="button_whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
+    <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" target="_blank"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
     </div>
 
     <!-- FOOTER -->

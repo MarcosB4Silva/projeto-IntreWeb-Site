@@ -86,13 +86,15 @@
     }
 
     header {
-        padding: 0;
+        padding: 10px 0;
     }
 
     main {
         padding-top: 0;
     }
-
+    #redes_about{
+        display: none;
+    }
     #closeMenu,
     #openMenu {
         display: block;
@@ -106,6 +108,13 @@
         width: 100%;
         text-align: right;
     }
+    .btn_menu{
+        width: 100%;
+        margin: 2px 0;
+        text-align: center;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
 
     #menu {
         position: fixed;
@@ -113,7 +122,8 @@
         top: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #ffffff7d;
+        background-color: #e6e6e6c2;
+        backdrop-filter: blur(15px);
         align-items: center;
         justify-content: start;
         margin: 0;
@@ -155,7 +165,6 @@
         width: 100%;
         height: auto;
         display: flex;
-        /*align-items: center;*/
         flex-direction: column;
         justify-content: center;
     }
@@ -163,7 +172,7 @@
     .about_text {
         margin-top: 20px;
         align-items: left;
-        padding: 0;
+        padding: 0 20px;
     }
 
     /* projetos */
@@ -194,5 +203,8 @@
 
     .footer_content {
         height: auto;
+    }
+    .about_text {
+        padding: 0 10px;
     }
 }

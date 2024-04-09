@@ -50,7 +50,7 @@ header {
     z-index: 1;
     background-color: hsla(0, 0%, 100%, 0.5);
     backdrop-filter: blur(10px);
-    padding: 15px 30px;
+    padding: 20px 30px;
 }
 a {
     text-decoration: none;

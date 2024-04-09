@@ -1,6 +1,6 @@
 <?php
 include_once './models/conexao_bd.php';
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,7 +13,8 @@ include_once './models/conexao_bd.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>INTRÊ Aquitetura</title>
+    <link rel="shortcut icon" href="./icoIntre.ico" type="image/x-icon">
+    <title>INTRÊ Arquitetura: Início</title>
 </head>
 
 <body>
@@ -29,7 +30,7 @@ include_once './models/conexao_bd.php';
             <a href="index.php" class="btn_menu">Início</a>
             <a href="projetos.php" class="btn_menu">Projetos</a>
             <a href="servico.html" class="btn_menu">Serviços</a>
-            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu">Contato</a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" class="btn_menu" target="_blank">Contato</a>
         </nav>
     </header>
 
@@ -68,12 +69,12 @@ include_once './models/conexao_bd.php';
                         estamos
                         prontas para tornar seus projetos realidade.
                     </p>
-                    <div class="about_icones_redes">
+                    <div class="about_icones_redes" id="redes_about">
                         <h3> Redes Sociais</h3>
                         <div class="icone_redes">
-                            <a href="https://www.instagram.com/intrearquitetura/"><li id="instagram"><i class="fa-brands fa-instagram"></i></li></a>
-                            <a href="https://www.facebook.com/intrearquitetura"><li id="facebook"><i class="fa-brands fa-facebook-f"></i></li></a>
-                            <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1"><li id="tiktok"><i class="fa-brands fa-tiktok"></i></li></a>
+                            <a href="https://www.instagram.com/intrearquitetura/" target="_blank"><li id="instagram"><i class="fa-brands fa-instagram"></i></li></a>
+                            <a href="https://www.facebook.com/intrearquitetura" target="_blank"><li id="facebook"><i class="fa-brands fa-facebook-f"></i></li></a>
+                            <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1" target="_blank"><li id="tiktok"><i class="fa-brands fa-tiktok"></i></li></a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +109,7 @@ include_once './models/conexao_bd.php';
         </section>
         <!-- Whatsapp -->
         <div class="button_whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" target="_blank"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
         </div>
 
         <!-- FOOTER -->
@@ -138,9 +139,9 @@ include_once './models/conexao_bd.php';
                 <div class="footer_social_media">
                     <h3>Redes Sociais</h3>
                     <div class="icone_redes">
-                        <a href="https://www.instagram.com/intrearquitetura/"><li id="instagram"><i class="fa-brands fa-instagram"></i></li></a>
-                        <a href="https://www.facebook.com/intrearquitetura"><li id="facebook"><i class="fa-brands fa-facebook-f"></i></li></a>
-                        <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1"><li id="tiktok"><i class="fa-brands fa-tiktok"></i></li></a>
+                        <a href="https://www.instagram.com/intrearquitetura/" target="_blank"><li id="instagram"><i class="fa-brands fa-instagram"></i></li></a>
+                        <a href="https://www.facebook.com/intrearquitetura" target="_blank"><li id="facebook"><i class="fa-brands fa-facebook-f"></i></li></a>
+                        <a href="https://www.tiktok.com/@intrearquitetura?_t=8lKpkhWiSYP&_r=1" target="_blank"><li id="tiktok"><i class="fa-brands fa-tiktok"></i></li></a>
                     </div>
                 </div>
             </div>
@@ -148,9 +149,6 @@ include_once './models/conexao_bd.php';
                 &#169 2024 INTRÊ arquitetura
             </div>
         </footer>
-
-
-
 </body>
 <script src="./views/js/scrypt.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

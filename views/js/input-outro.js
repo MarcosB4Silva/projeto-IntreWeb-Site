@@ -3,7 +3,7 @@ const checkbox = document.getElementById('outro_checkbox');
 const textoInput = document.getElementById('outro_text');
 
 checkbox.addEventListener('click', () => {
-    if(textoInput.style.display != 'inline'){
+    if(checkbox.checked){
         textoInput.style.display = 'inline';
     } else{
         textoInput.style.display = 'none';
@@ -11,7 +11,7 @@ checkbox.addEventListener('click', () => {
 })
 
 textoInput.addEventListener('input', function() {
-    let textoModificado = this.value.split(" ").join("-");
-    textoModificado = `* ${textoModificado}`;
+    let textoModificado = this.value.split(" ").join("_");
+    textoModificado = `*.${textoModificado}`;
     checkbox.value = textoModificado;
 });

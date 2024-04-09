@@ -36,3 +36,17 @@ function Checkfiles(){
         return false;
     }
 }
+
+let upload = document.getElementById("input_image");
+upload.addEventListener("change", function(e){
+	let size = upload.files[0].size;
+	if(size > 73400320){
+		Swal.fire({
+			icon: "error",
+			title: "Tamanho maximo não suportados",
+			text: "Limite maximo do arquivo suportados e de 70MB",
+		});
+		upload.value = "";
+	}
+	e.preventDefault();
+});
