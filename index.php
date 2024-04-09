@@ -1,6 +1,6 @@
 <?php
 include_once './models/conexao_bd.php';
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,7 +13,8 @@ include_once './models/conexao_bd.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>INTRÊ Aquitetura</title>
+    <link rel="shortcut icon" href="./icoIntre.ico" type="image/x-icon">
+    <title>INTRÊ Arquitetura: Início</title>
 </head>
 
 <body>
@@ -108,7 +109,7 @@ include_once './models/conexao_bd.php';
         </section>
         <!-- Whatsapp -->
         <div class="button_whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
+            <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" target="_blank"><li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li></a>
         </div>
 
         <!-- FOOTER -->
@@ -148,9 +149,21 @@ include_once './models/conexao_bd.php';
                 &#169 2024 INTRÊ arquitetura
             </div>
         </footer>
-
-
-
+        <?php
+        echo"<script>alert(".$_SESSION["mensagem"].");</script>";
+        if (isset ($_SESSION["mensagem"])) { ?>
+        <script>
+            Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Formulario enviado com sucesso",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        </>
+    <?php }
+    session_unset();
+?>
 </body>
 <script src="./views/js/scrypt.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

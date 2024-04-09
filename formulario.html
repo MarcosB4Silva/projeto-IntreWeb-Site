@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Formulario</title>
+    <link rel="shortcut icon" href="./icoIntre.ico" type="image/x-icon">
+    <title>INTRÊ Arquitetura: Solicitação de Serviço</title>
 </head>
 
 <body>
@@ -30,30 +31,28 @@
                 class="btn_menu">Contato</a>
         </nav>
     </header>
-    <form action="./controllers/formulario.php" onsubmit="Checkfiles(this)" id="formulario" method="post">
-        <h3>Qual tipo de serviço?</h3>
+    <form action="./controllers/formulario.php" onsubmit="Checkfiles(this)" id="formulario" method="post" enctype="multipart/form-data">
+        <h3>Que tipo de serviço você deseja?</h3>
         <div class="input_radio">
-            <label for="construir"><input type="radio" id="construir" name="servico" value="construir" required>
+            <label for="construir"><input type="radio" id="construir" name="servico" value="Construir" required>
                 Construir</label>
-            <label for="reformar"><input type="radio" id="reformar" name="servico" value="reformar" required>
+            <label for="reformar"><input type="radio" id="reformar" name="servico" value="Reformar" required>
                 Reformar</label>
-            <label for="consultoria"><input type="radio" id="consultoria" name="servico" value="consultoria" required>
+            <label for="consultoria"><input type="radio" id="consultoria" name="servico" value="Consultoria" required>
                 Consultoria</label>
         </div>
 
         <h3>Qual tipo de imóvel?</h3>
         <div class="input_radio">
-            <label for="casa"><input type="radio" id="casa" name="imovel" value="casa" required> Casa</label>
-            <label for="apartamento"><input type="radio" id="apartamento" name="imovel" value="apartamento" required>
-                Apartamento</label>
-            <label for="sala_comercial"><input type="radio" id="sala_comercial" name="imovel" value="sala_comercial"
-                    required> Sala Comercial</label>
+            <label for="casa"><input type="radio" id="casa" name="imovel" value="Casa" required> Casa</label>
+            <label for="apartamento"><input type="radio" id="apartamento" name="imovel" value="Apartamento" required> Apartamento</label>
+            <label for="sala_comercial"><input type="radio" id="sala_comercial" name="imovel" value="Sala Comercial"required> Sala Comercial</label>
         </div>
 
-        <h3>Qual tamanho?</h3>
+        <h3>Qual o tamanho do imóvel?</h3>
         <input type="number" name="metragem" placeholder="0m²" id="metragem" required>
 
-        <h3>Informe o endereço da obra</h3>
+        <h3>Informe o endereço do imóvel:</h3>
         <div class="container_endereco">
             <input type="text" placeholder="Rua" name="logradouro" required>
             <input type="text" placeholder="Bairro" name="bairro" required>
@@ -96,7 +95,7 @@
             <div class="box_checkbox">
                 <label for=""><input type="checkbox" value="sala_de_estar" name="ambiente[]"> SALA DE ESTAR </label>
                 <label for=""><input type="checkbox" value="sala_de_jantar" name="ambiente[]"> SALA DE JANTAR</label>
-                <label for=""><input type="checkbox" value="cozinha " name="ambiente[]"> COZINHAS</label>
+                <label for=""><input type="checkbox" value="cozinha" name="ambiente[]"> COZINHAS</label>
                 <label for=""><input type="checkbox" value="area_de_serviço" name="ambiente[]"> ÁREA DE SERVIÇO</label>
                 <label for=""><input type="checkbox" value="suite" name="ambiente[]"> SUÍTE</label>
                 <label for=""><input type="checkbox" value="varanda" name="ambiente[]"> VARANDA</label>
@@ -114,38 +113,37 @@
 
         <h3>Com relação a REVESTIMENTOS, você deseja:</h3>
         <div class="input_radio">
-            <label for="manter"><input type="radio" id="manter" name="revestimento" value="manter" required>
+            <label for="manter"><input type="radio" id="manter" name="revestimento" value="Manter" required>
                 Manter</label>
-            <label for="trocar"><input type="radio" id="trocar" name="revestimento" value="trocar" required>
+            <label for="trocar"><input type="radio" id="trocar" name="revestimento" value="Trocar" required>
                 Trocar</label>
             <label for="trocar_parcial"><input type="radio" id="trocar_parcial" name="revestimento"
-                    value="trocar_parcial" required> Trocar parcialmente</label>
-            <label for="ajuda"><input type="radio" id="ajuda" name="revestimento" value="ajuda" required> Ajuda para
+                    value="Trocar Parcial" required> Trocar parcialmente</label>
+            <label for="ajuda"><input type="radio" id="ajuda" name="revestimento" value="Ajuda para decidir" required> Ajuda para
                 decidir</label>
         </div>
 
         <h3>Com relação a MARCENARIA, você deseja:</h3>
         <div class="input_radio">
-            <label for="manter_marcenaria"><input type="radio" id="manter_marcenaria" name="macenaria" value="manter"
+            <label for="manter_marcenaria"><input type="radio" id="manter_marcenaria" name="macenaria" value="Manter"
                     required> Manter</label>
-            <label for="trocar_marcenaria"><input type="radio" id="trocar_marcenaria" name="macenaria" value="trocar"
+            <label for="trocar_marcenaria"><input type="radio" id="trocar_marcenaria" name="macenaria" value="Trocar"
                     required> Trocar</label>
             <label for="trocar_parcial_marcenaria"><input type="radio" id="trocar_parcial_marcenaria" name="macenaria"
-                    value="trocar_parcial" required> Trocar parcialmente</label>
-            <label for="ajuda_marcenaria"><input type="radio" id="ajuda_marcenaria" name="macenaria" value="ajuda"
+                    value="Trocar Parcial" required> Trocar parcialmente</label>
+            <label for="ajuda_marcenaria"><input type="radio" id="ajuda_marcenaria" name="macenaria" value="Ajuda para decidir"
                     required> Ajuda para decidir</label>
         </div>
 
         <div class="input_text">
-            <h3>Descreva o que mais gostaria de mudar nos ambientes</h3>
+            <h3>Descreva o que mais gostaria de mudar nos ambientes:</h3>
             <input type="text" name="desc_ambiente">
         </div>
 
         <div class="input_file">
-            <h3>Possui a planta do imóvel? Mande fotos dos ambientes, isso ajuda a visualizar o que precisa nos
-                ambiente.</h3>
+            <h3>Possui a planta do imóvel? Se sim, envie uma foto. É importante que também envie algumas fotos dos ambientes do imóvel:</h3>
             <input type="file" name="imagem[]" id="input_image" class="inputfile inputfile-4"
-                data-multiple-caption="{count} arquivos selecionados" accept="image/png, image/jpeg" />
+                data-multiple-caption="{count} arquivos selecionados" accept="image/png, image/jpeg" multiple/>
             <label for="input_image" class="file_text">
                 <span class="iborrainputfile">Selecionar imagens</span>
             </label>    
@@ -153,23 +151,23 @@
 
         <h3>Você pretende ficar por muito tempo nesse imóvel ou é temporário?</h3>
         <div class="input_radio">
-            <label for="muito"><input type="radio" id="muito" name="tempo_imovel" value="muito" required> Manter</label>
-            <label for="temporario"><input type="radio" id="temporario" name="tempo_imovel" value="temporario" required>
+            <label for="muito"><input type="radio" id="muito" name="tempo_imovel" value="Muito" required> Manter</label>
+            <label for="temporario"><input type="radio" id="temporario" name="tempo_imovel" value="Temporário" required>
                 Temporário</label>
         </div>
 
         <h3>Qual preferência para contato:</h3>
         <div class="input_radio">
-            <label for="email"><input type="radio" id="email" name="contato" value="email" required> E-mail</label>
-            <label for="whatsapp_form"><input type="radio" id="whatsapp_form" name="contato" value="whatsapp" required>
+            <label for="email"><input type="radio" id="email" name="contato" value="E-mail" required> E-mail</label>
+            <label for="whatsapp_form"><input type="radio" id="whatsapp_form" name="contato" value="Whatsapp" required>
                 Whatsapp</label>
         </div>
 
         <div class="inputBox">
-            <label for="nome" class="labelInput">Nome: <input type="text" name="nome" id="nome" class="inputUser"
+            <label for="nome" class="labelInput">Seu nome: <input type="text" name="nome" id="nome" class="inputUser"
                     required></label>
             <br>
-            <label for="email" class="labelInput">E-mail: <input type="text" name="email" id="email" class="inputUser"
+            <label for="email" class="labelInput">Seu e-mail: <input type="text" name="email" id="email" class="inputUser"
                     required></label>
             <br>
             <label for="telefone" class="labelInput">Tel-Cel: <input type="tel" name="telefone" id="telefone"
@@ -180,7 +178,7 @@
     </form>
 
     <div class="button_whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!">
+        <a href="https://api.whatsapp.com/send?phone=5511930672567&text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento!" target="_blank">
             <li><i class="fa-brands fa-whatsapp" id="whatsapp"></i></li>
         </a>
     </div>
